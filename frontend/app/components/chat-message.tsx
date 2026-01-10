@@ -1,6 +1,6 @@
 "use client"
 
-import { cn } from "@/lib/utils"
+import { cn } from "../../../lib/utils"
 import { User, Sparkles, Copy, Check, Image as ImageIcon } from "lucide-react"
 import { useState } from "react"
 import type { Message } from "./chat-interface"
