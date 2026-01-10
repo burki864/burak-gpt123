@@ -1,23 +1,27 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "baseUrl": ".",
+    "target": "ES2022",                  // X
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], // X
+    "allowJs": true,                     // X
+    "skipLibCheck": true,                // X
+    "strict": true,                      // X
+    "noEmit": true,                      // X
+    "esModuleInterop": true,             // X
+    "module": "ESNext",                  // X
+    "moduleResolution": "Bundler",       // X
+    "resolveJsonModule": true,           // X
+    "isolatedModules": true,             // X
+
+    "jsx": "react-jsx",                  // 🔴 DEĞİŞTİ (Next zorunlu)
+
+    "incremental": true,                 // X
+    "baseUrl": ".",                      // X
+
     "paths": {
-      "@/*": ["./app/*"]
+      "@/*": ["./app/*"],                // X
+      "@/lib/*": ["./app/lib/*"]         // 🔴 EKLENDİ (kritik)
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"], // X
+  "exclude": ["node_modules"]             // X
 }
